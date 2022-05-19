@@ -1,0 +1,25 @@
+{% extends 'templates/article/base.html' %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+    <div class="row">
+        <div class="col-md-10">
+          <div class="text">
+    {% for i in post %}
+        {% if i.content == "" %}
+        {% else %}
+            <h3>Title:  {{ i.title }} <br></h3>
+            <p><b>Article : {{ i.content }}</b></p>
+             <p>Posted by <b>{{ i.author }}</b> on <b>{{ i.date_posted }}</b></p>
+        {% endif %}
+    {% endfor %}
+    </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

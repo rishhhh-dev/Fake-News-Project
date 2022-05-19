@@ -1,0 +1,15 @@
+{% extends 'article/base.html' %}
+
+{% block title %}
+    Logout page
+{% endblock %}
+
+{% block body %}
+    <h2>You have been logged out!</h2>
+    <div class="container">
+    <div class="border-top pt-3">
+        Do you want to login again?
+        <b><a href={% url 'login' %}>Login</a></b>
+    </div>
+    </div>
+{% endblock %}

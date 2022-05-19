@@ -1,0 +1,21 @@
+{% extends 'article/base.html' %}
+
+{% block title %}
+    Admin page
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+    <div class="row">
+        <h3>Welcome to the admin page</h3>
+        <div class="col-md-10">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+             <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}
